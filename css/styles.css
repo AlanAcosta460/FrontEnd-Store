@@ -1,0 +1,133 @@
+/* Propiedades Personalizadas */
+:root {
+    /* Paleta de Colores */
+    --primario: #9C27B0;
+    --primario-oscuro: #89119D;
+    --secundario: #FFCE00;
+    --secundario-oscuro: rgb(233, 287, 2);
+    --blanco: #FFFFFF;
+    --negro: #000000;
+
+    --fuente-principal: 'Staatliches', cursive; /* Fuente */
+}
+
+/* Globales */
+html {
+    box-sizing: border-box; /* Box Model */
+    font-size: 62.5% /* 1rem = 100px */;
+}
+*, *:before, *:after { /* Box Model */
+    box-sizing: inherit; 
+}
+body {
+    font-size: 16px; /* 1rem = 100px */
+    background-color: var(--primario); /* Fondo */
+    line-height: 1.5; /* Interlineado */
+}
+p {
+    font-size: 1.8rem; /* Tamaño */
+    font-family: Arial, Helvetica, sans-serif; /* Fuente */
+    color: var(--blanco); /* Color */
+}
+a {
+    text-decoration: none; /* Quitar decoracion a links */
+}
+img {
+    max-width: 100%;
+}
+.contenedor {
+    max-width: 120rem; /* Tamaño */
+    margin: 0 auto; /* Centrado */
+}
+h1, h2, h3 {
+    text-align: center;
+    color: var(--secundario);
+    font-family: var(--fuente-principal);
+}
+h1 {
+    font-size: 4rem;
+}
+h2 {
+    font-size: 3.2rem;
+}
+h3 {
+    font-size: 2.4rem;
+}
+
+/* Header */
+.header {
+    display: flex;
+    justify-content: center; /* Centrado */
+}
+.header__logo {
+    margin: 3rem 0; /* Margen de 30px arriba y abajo */
+}
+
+/* Navegación */
+.navegacion {
+    background-color: var(--primario-oscuro); /* Fondo */
+    padding: 1rem 0; /* 1rem arriba y abajo, 0 a los lados */
+    display: flex;
+    justify-content: center; /* Centrado */
+    /* gap: 2rem; ---> Separación (forma actualizada) */
+}
+.navegacion__enlace {
+    font-family: var(--fuente-principal); /* Fuente */
+    color: var(--blanco); /* Color */
+    font-size: 3rem; /* Tamaño */
+    margin: 0 1rem; /* Separación de los enlaces */
+}
+.navegacion__enlace:hover, .navegacion__enlace--activo {
+    color: var(--secundario);
+}
+
+/* Footer */
+.footer {
+    background-color: var(--primario-oscuro); /* Color de Fondo */
+    padding: 1rem 0; /* Grosor */
+    margin: 2rem 0; /* Separación */
+}
+.footer__texto {
+    font-family: var(--fuente-principal); /* Fuente */
+    text-align: center; /* Centrado */
+    font-size: 2rem; /* Tamaño */   
+}
+
+/* Grid */
+.grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* Dividiendo en dos columnas */
+    column-gap: 2rem; /* Separación entre columnas */
+    row-gap: 2rem; /* Separación entre filas */
+    /* gap: 2rem; ---> Incluye la separacion de columnas y filas */
+}
+@media (min-width: 768px) {
+    .grid {
+        grid-template-columns: repeat(3, 1fr); /* Dividiendo en tres columnas */
+    }
+}
+
+/* Productos */
+.producto {
+    background-color: var(--primario-oscuro); /* Color de fondo */
+    padding: 1rem; 
+}
+.producto__imagen {
+    width: 100%; /* Imagen responsiva */
+}
+.producto__infomacion {
+    
+}
+.producto__nombre {
+    font-size: 3.3rem; /* Tamaño */
+}
+.producto__precio {
+    font-size: 2.5rem; /* Tamaño */
+    color: var(--secundario); /* Color */
+}
+.producto__nombre, .producto__precio {
+    font-family: var(--fuente-principal); /* Fuente */
+    margin: 1rem 0; /* Margen superior e inferior de 10px */
+    text-align: center; /* Centrado */
+    line-height: 1.2; /* Interlineado */
+}
