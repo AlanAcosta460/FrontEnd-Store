@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -8,8 +9,8 @@
     <!-- Titulo -->
     <title>FrontEnd Store</title>
 
-    <!-- Normalize CSS -->   
-    <link rel="preload" href="css/normalize.css" as="style" >
+    <!-- Normalize CSS -->
+    <link rel="preload" href="css/normalize.css" as="style">
     <link rel="stylesheet" href="css/normalize.css">
 
     <!-- Google Fonts -->
@@ -19,14 +20,15 @@
 
     <!-- Stylesheet CSS -->
     <link rel="preload" href="css/styles.css" as="style">
-    <link href="css/styles.css" rel="stylesheet" >
+    <link href="css/styles.css" rel="stylesheet">
 </head>
 
 <body>
     <!-- Logo -->
     <header class="header">
-        <a href="index.html"></a>
+        <a href="index.html">
             <img class="header__logo" src="img/logo.png" alt="Logotipo"> <!-- alt -> Texto alternativo -->
+        </a>
     </header>
 
     <!-- Navegación Principal -->
@@ -34,9 +36,39 @@
         <a class="navegacion__enlace navegacion__enlace--activo" href="index.html">Tienda</a>
         <a class="navegacion__enlace" href="nosotros.html">Nosotros</a>
     </nav>
-    
+
+    <!-- Página del producto -->
     <main class="contenedor">
-        <h1>Producto</h1>
+        <h1>React Js</h1>
+
+        <div class="camisa">
+            <!-- Imagén -->
+            <img class="camisa__imagen" src="img/3.jpg" alt="imagen del producto">
+
+            <div class="camisa__contenido">
+                <!-- Descripción -->
+                <p>Morbi maximus eu ante at fermentum. Phasellus pellentesque blandit iaculis. Ut hendrerit ipsum nec
+                    elit lacinia tincidunt. Aliquam mauris nisi, lobortis vel pellentesque vulputate, cursus eget nunc.
+                    Phasellus egestas sodales dolor at ultrices.</p>
+                
+                <!-- Formulario -->
+                <form class="formulario" action="">
+                    <!-- Seleccionar talla -->
+                    <select class="formulario__campo">
+                        <option disabled selected value="">-- Seleccionar Talla --</option> <!-- disabled -> No se puede selccionar. selected-> Selaccionado por default. -->
+                        <option>Chica</option>
+                        <option>Mediana</option>
+                        <option>Grande</option>
+                    </select>
+
+                    <!-- Cantidad de camisas -->
+                    <input class="formulario__campo" type="number" placeholder="Cantidad" min="1"> <!-- min -> Cantidad minima -->
+
+                    <!-- Botón para agregar al carrito -->
+                    <input class="formulario__submit" type="submit" value="Agregar al Carrito">
+                </form>
+            </div>
+        </div>
     </main>
 
     <!-- Footer -->
@@ -44,4 +76,5 @@
         <p class="footer__texto">Front End Store - Todos los derechos reservados 2023.</p>
     </footer>
 </body>
+
 </html>
